@@ -1,0 +1,46 @@
+---
+id: get-article
+title: "Get an article."
+description: "Get an article."
+sidebar_label: "Get an article."
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VVtP2zAU/iuWedmkqi2o2kOFkBgwVgkJBOypIGSSk8SbaxvbQVRR/vvOcdI2IWXTXvbUk3P9zsVfK24sOBGk0YuUz3kO4dQFmSjgIx5E7vl8yVsNO71Z8McRt8KJFQRwZKy4xg+MlClGSI2SFaFAOQWfOGkpNSpvwZvSJcAW52hz8FJKB1gxuBJG3CcFrASfV3+MCmsbK+kAOThUZMatRGhUX2Yxr0ivtVpv8sKbWFnsZX6I0TKQxLHPun4kX2+N9uCp7NF0Oqx+VyYJeI95E4M1dSAXYa2SSZzY5Kcnv6oDXyh1ncWxWEeTDbLJj9P5b80hXIFJjFsPa561FmYyJjQTu1035X1wUue8k5zjlFzwOLNdlfYgvhl3JX3gzTQ3G13yAG8hHkpvBFE7BNRM9q94VuLtCnSOlzU/nB7NugAP2D3hetAP+uCAfccpsSup4/dXk673IUcdaWfT2RDRfQHMbVYjPdMmsMyUOh3/yyH0cx4H8azg5EEzdhxc/CWpODkzKRxPUNipzneRWwsKbhCdnkilIBfqSWpbBvRJOzZqI+qpB6lfhZLpeOvzQULs9Sn2uifZ/pm8z4g/bau8fxQJdkp7xAclchieR7TTmXx4iL1ue1u9cM64uNP6Pe9cQugc1jgiCIVpuY6PGraa80nr4SeVTOtIZZkhPK/Ic02qw/F0POWdW7pZsDsLiczaM2AXLVZEYY0PKxGPoiXIIZIe0m3n9E4mVgnkUsxTOkW2BuWSb1Bi9Bw5BadYYCGyVNWz8PDDqbom9UsJ9P6XKL4KJ2knkZZS6UnG/jOhPAxAbA+cf7ptt/eZ7WWqPs5WKfSaU0VV0heKv2Dd/DnUj+hV4ONEciMgjeEUGdaGTsjgVRG5bFd2eXGPa/4NdflAPg==
+sidebar_class_name: "get api-method"
+info_path: docs/api/dbaas/api-specification-example
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1 className={"openapi__heading"}>Get an article.</h1>
+
+<MethodEndpoint method={"get"} path={"/articles/{id}"}></MethodEndpoint>
+
+
+
+Get an article.
+
+## Request
+
+<details style={{"marginBottom":"1rem"}} className={"openapi-markdown__details"} data-collapsed={false} open={true}><summary style={{}}><h3 className={"openapi-markdown__details-summary-header-params"}>Path Parameters</h3></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"id","in":"path","description":"Resource ID","required":true,"schema":{"description":"Resource ID","type":"integer","format":"int64","readOnly":true,"example":1,"title":"Id"}}}></ParamsItem></ul></div></details><div><div><ApiTabs label={undefined} id={undefined}><TabItem label={"200"} value={"200"}><div>
+
+Success
+
+</div><div><MimeTabs className={"openapi-tabs__mime"} schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs className={"openapi-tabs__schema"}><TabItem label={"Schema"} value={"Schema"}><details style={{}} className={"openapi-markdown__details response"} data-collapsed={false} open={true}><summary style={{}} className={"openapi-markdown__details-summary-response"}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"text"} required={true} schemaName={"string"} qualifierMessage={"**Possible values:** `<= 1024 characters`"} schema={{"description":"Content of an article","type":"string","maxLength":1024,"example":"# Title\n\n## Head Line\n\nBody"}}></SchemaItem><SchemaItem collapsible={false} name={"id"} required={false} schemaName={"int64"} qualifierMessage={undefined} schema={{"description":"Resource ID","type":"integer","format":"int64","readOnly":true,"example":1,"title":"Id"}}></SchemaItem><SchemaItem collapsible={false} name={"category"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"description":"Category of an article","type":"string","example":"sports"}}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"text\": \"# Title\\n\\n## Head Line\\n\\nBody\",\n  \"id\": 1,\n  \"category\": \"sports\"\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem><TabItem label={"404"} value={"404"}><div>
+
+The resource is not found.
+
+</div><div><MimeTabs className={"openapi-tabs__mime"} schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs className={"openapi-tabs__schema"}><TabItem label={"Schema"} value={"Schema"}><details style={{}} className={"openapi-markdown__details response"} data-collapsed={false} open={true}><summary style={{}} className={"openapi-markdown__details-summary-response"}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"code"} required={true} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string","example":"illegal_input"}}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"code\": \"illegal_input\"\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div></div>
+      

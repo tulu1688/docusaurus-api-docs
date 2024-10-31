@@ -1,0 +1,42 @@
+---
+id: list-articles
+title: "Get a list of articles"
+description: "Get a list of articles"
+sidebar_label: "Get a list of articles"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU01v2zAM/SsGz0HjFsMOvgVbVwQYsGLdTkUOrEPH2mRJlegigZH/PtI2HDfZF5pLTIl871F87MAHisjGu/UWCrAm8SqyKS0lWADjLkHxCONRtrpfw2YBASM2xBT1sgMnQV/bGJYi4yR4bikeJNhSKqMJSjBLifTcmkjCWKFNtIBU1tQgFB3wISiYcUw7ipLbGGeatoHiWr5xP37nuWJX2FrWaAG0xyZY0uB4XEyifFUl+oeqKedNsuZCznVsFDMF75I8p6Dc5Ln+vaZ/aMuSkj536QXesaZgCNaU/WCWP5LmdZdqMEbUdgxT0+OHqONkM7CZ7SXZV0q+jSVl64863/OuKh8b5OHo/bv+SXD7xdkDFBxbmrcn1Yb1C8Q5RxGPAuLleS84P4w3ma8ydBkOZjrRJ47G7WAGDvJmkRPIJCeW0YOffPwsJoXLm+FYf+cDviPOMFNv9xJO/hYT1159v+vnH5BrCZazDOMqrx29iNkHsOur/CqHGfv9OnsIVJpqnFd2O7YhOoJP3GA/vdGQf9TySvI0YqY9L4NFsa/AtdH2Y+51PsJULT6rhUnPuu4JE32P9njU48HxuqVbk/DJzsx9RjiZb9rS30r4SYdZygvaVnNAV+7/GaaN+wvFlHPi2GgQjZJISxtJrcWeYlztb6hayS6FedXFIinKNPe7229imV/nxrI5
+sidebar_class_name: "get api-method"
+info_path: docs/api/dbaas/api-specification-example
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1 className={"openapi__heading"}>Get a list of articles</h1>
+
+<MethodEndpoint method={"get"} path={"/articles"}></MethodEndpoint>
+
+
+
+Get a list of articles
+
+## Request
+
+<details style={{"marginBottom":"1rem"}} className={"openapi-markdown__details"} data-collapsed={false} open={true}><summary style={{}}><h3 className={"openapi-markdown__details-summary-header-params"}>Query Parameters</h3></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"limit","in":"query","description":"limit","required":false,"schema":{"type":"integer","minimum":1,"maximum":100,"default":10,"example":10}}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"offset","in":"query","description":"offset","required":false,"schema":{"type":"integer","minimum":0,"default":0,"example":10}}}></ParamsItem></ul></div></details><div><div><ApiTabs label={undefined} id={undefined}><TabItem label={"200"} value={"200"}><div>
+
+Success
+
+</div><div><MimeTabs className={"openapi-tabs__mime"} schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs className={"openapi-tabs__schema"}><TabItem label={"Schema"} value={"Schema"}><details style={{}} className={"openapi-markdown__details response"} data-collapsed={false} open={true}><summary style={{}} className={"openapi-markdown__details-summary-response"}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><li><div style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}>Array [</div></li><SchemaItem collapsible={false} name={"id"} required={false} schemaName={"int64"} qualifierMessage={undefined} schema={{"description":"Resource ID","type":"integer","format":"int64","readOnly":true,"example":1,"title":"Id"}}></SchemaItem><SchemaItem collapsible={false} name={"category"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"description":"Category of an article","type":"string","example":"sports"}}></SchemaItem><li><div style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}>]</div></li></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"[\n  {\n    \"id\": 1,\n    \"category\": \"sports\"\n  }\n]"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div></div>
+      
